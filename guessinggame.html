@@ -1,18 +1,20 @@
 <script>
-var count = 0;
-for (i = 0; i < 3; i++){
-  var question = ["what is the best kind of gun?", "What is the best kind of vehicle?", "Where would you rather be today?"];
+  var count = 0;
+  var question = ["What is the best kind of gun?", "What is the best kind of vehicle?", "Where would you rather be today?"];
   var answer = ["shotgun", "truck", "the beach"];
   var rightAnswer = ["Alright!", "You're getting better at this!", "Dude!"];
   var wrongAnswer = ["No dummy!", "Quit while you're ahead!", "I'm not sure we can be friends!"];
-  var guess = prompt(question[i]);
-  if(guess === answer[i]) {
-    alert(rightAnswer[i]);
-    count++;
+
+  for (i = 0; i < question.length; i++){
+    var guess = prompt(question[i]);
+    if(guess === answer[i]) {
+      alert(rightAnswer[i]);
+      count++;
+    }
+    else {
+      alert(wrongAnswer[i]);
+    }
   }
-  else {
-    alert(wrongAnswer[i]);
-  }
-}
-alert(count + " Correct! I guess we can still hang out...");
+
+  alert(count + " Correct! I guess we can still hang out...");
 </script>
